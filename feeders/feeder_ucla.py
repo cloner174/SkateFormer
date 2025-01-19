@@ -1630,7 +1630,7 @@ class Feeder(Dataset):
             value = scalerValue[:, :, :]
             length = value.shape[0]
 
-            idx = np.linspace(0, length - 1, self.time_steps).astype(np.int)
+            idx = np.linspace(0, length - 1, self.time_steps).astype(int)
             data[:, :, :] = value[idx, :, :]
             index_t = 2 * idx.astype(np.float32) / length - 1
 
